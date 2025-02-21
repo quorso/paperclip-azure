@@ -18,7 +18,8 @@ Gem::Specification.new do |gem|
   gem.license       = "MIT"
 
 
-  gem.add_dependency "azure-storage-blob", "~> 2.0"
+  gem.add_dependency "azure-storage-common", git: "https://github.com/quorso/azure-storage-ruby.git", ref: "83335d4", glob: "common/*.gemspec"
+  gem.add_dependency "azure-storage-blob", git: "https://github.com/quorso/azure-storage-ruby.git", ref: "83335d4", glob: "blob/*.gemspec"
   gem.add_dependency "addressable", "~> 2.5"
 
   gem.add_development_dependency "paperclip", "~> 4.3", ">= 4.3.6"
